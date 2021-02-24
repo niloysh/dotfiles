@@ -53,8 +53,36 @@ abbr flase false
 "####################
 "# General settings #
 "####################
+
+"Turn on file specific indentation
 filetype indent on
-set scrolloff=10
+
+"Scroll when cursor reaches x lines from the bottom
+set scrolloff=8
+
+"Reload external file changes
+set autoread
+
+"Show options for tab completion
+set wildmenu
+
+"Get rid of annoying bell sounds on error
+"and show visual feedback
+set noerrorbells
+set visualbell
+
+"Tab settings
+set expandtab
+set autoindent smartindent
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4
+set copyindent
+set smarttab
+
+"search settings
+set incsearch
+set hlsearch
 
 "##################
 "# Split settings #
@@ -135,7 +163,6 @@ autocmd Filetype tex setlocal tabstop=4 sw=4 sts=4
 autocmd Filetype tex setlocal spell spelllang=en_us
 
 "Start vim with server for forward search
-"Does not seem to work with WSL
 if empty(v:servername) && exists('*remote_startserver')
 call remote_startserver('VIM')
 endif
