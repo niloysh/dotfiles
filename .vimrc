@@ -107,6 +107,8 @@ Plug 'lervag/vimtex'
 Plug 'sirver/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'preservim/nerdcommenter'
 Plug 'davidhalter/jedi-vim'
+Plug 'skywind3000/asyncrun.vim' | Plug 'conornewton/vim-pandoc-markdown-preview'
+Plug 'tpope/vim-surround'
 call plug#end()
 
 "########################
@@ -201,3 +203,8 @@ let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 "#####################
 let g:jedi#completions_enabled = 1
 let g:jedi#popup_on_dot = 0
+
+"################################################################################
+"# Markdown to pdf settings
+"################################################################################
+let g:md_pdf_viewer="zathura"
